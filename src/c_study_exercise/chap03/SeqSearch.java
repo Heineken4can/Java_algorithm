@@ -1,7 +1,7 @@
-package a_exercise.chap03;
+package c_study_exercise.chap03;
 import java.util.Scanner;
 // 선형 검색
-// 3-1
+
 class SeqSearch {
 	// 배열 a의 앞쪽 n개의 요소에서 key와 같은 요소를 선형 검색 
 	static int seqSearch(int[] a, int n, int key) {
