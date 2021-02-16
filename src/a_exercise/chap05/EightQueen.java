@@ -1,6 +1,6 @@
 package a_exercise.chap05;
 // 8퀸 문제 풀이
-
+// 5-9
 class EightQueen {
 	static boolean[] flag_a = new boolean[8];	// 각 행에 퀸을 놓았는지 체크
 	static boolean[] flag_b = new boolean[15]; 	// ／대각선 방향으로 퀸을 놓았는지 체크

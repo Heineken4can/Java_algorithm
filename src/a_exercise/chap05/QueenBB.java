@@ -1,6 +1,6 @@
 package a_exercise.chap05;
 // 각 행, 열에  1개의 퀸을 배치하는 조합을 재귀적으로 나열합니다.
-
+// 5-8
 class QueenBB {
 	static boolean[] flag = new boolean[8];		// 각 행에 퀸을 배치했는지 체크
 	static int[] pos = new int[8];				// 각 열의 퀸의 위치
