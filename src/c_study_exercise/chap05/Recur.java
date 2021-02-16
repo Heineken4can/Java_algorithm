@@ -1,9 +1,10 @@
-package a_exercise.chap05;
+package c_study_exercise.chap05;
 import java.util.Scanner;
-// 재귀 함수 이해하기
-// 5-3
+
+
+
 class Recur {
-	// 재귀 함수
+	
 	static void recur(int n) {
 		if (n > 0) {
 			recur(n - 1);
@@ -11,13 +12,15 @@ class Recur {
 			recur(n - 2);
 		}
 	}
-
+	
 	public static void main(String[] args) {
-		Scanner stdIn = new Scanner(System.in);
-
-		System.out.print("정수를 입력하세요.：");
-		int x = stdIn.nextInt();
-
+		Scanner sdtIn = new Scanner(System.in);
+		
+		System.out.print("정수 입력 : ");
+		int x = sdtIn.nextInt();
+		
 		recur(x);
 	}
+	
+	
 }

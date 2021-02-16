@@ -1,7 +1,7 @@
 package a_exercise.chap05;
 import java.util.Scanner;
 // 하노이의 탑
-
+// 5-6, 이거 이해가 전혀 안가네;;
 class Hanoi {
 	// no개의 원반을 x번 기둥에서 y번 기둥으로 옮김
 	static void move(int no, int x, int y) {

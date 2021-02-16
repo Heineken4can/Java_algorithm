@@ -1,7 +1,7 @@
 package a_exercise.chap05;
 import java.util.Scanner;
 // 꼬리 재귀가 없는 재귀 함수 이해하기
-
+// 5-5
 class RecurX2 {
 	// 꼬리 재귀를 제거했습니다. 
 	static void recur(int n) {

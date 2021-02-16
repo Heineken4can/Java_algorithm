@@ -1,7 +1,7 @@
 package a_exercise.chap05;
 import java.util.Scanner;
 // 유클리드 호제법으로 최대공약수 구하기
-
+// 5-2
 class EuclidGCD {
 	// 정수 x, y의 최대공약수를 구하여 반환합니다. 
 	static int gcd(int x, int y) {
