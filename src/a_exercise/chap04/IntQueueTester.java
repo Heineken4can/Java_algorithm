@@ -1,7 +1,7 @@
 package a_exercise.chap04;
 import java.util.Scanner;
 // int형 큐의 사용 예
-
+// 4-4
 class IntQueueTester {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);

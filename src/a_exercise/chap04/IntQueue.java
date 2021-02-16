@@ -1,6 +1,6 @@
 package a_exercise.chap04;
 // int형 큐
-
+// 4-3
 public class IntQueue {
 	private int max;			// 큐의 용량
 	private int front;			// 첫 번째 요소 커서

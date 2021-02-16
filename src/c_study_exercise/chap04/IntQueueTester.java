@@ -1,55 +1,57 @@
 package c_study_exercise.chap04;
+
 import java.util.Scanner;
 // int형 큐의 사용 예
 
 class IntQueueTester {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
-		IntQueue s = new IntQueue(64);	// 최대 64개를 인큐할 수 있는 큐
+		IntQueue s = new IntQueue(64);
 
 		while (true) {
-			System.out.println("현재 데이터 수：" + s.size() + " / "
-															  + s.capacity());
-			System.out.print("(1)인큐　(2)디큐　(3)피크　" +
-								  "(4)덤프　(0)종료：");
+			System.out.println("data count : " + s.size() + "/" + s.capacity());
+			System.out.println("1:inqueue, 2:dequeue, 3:peak, 4:dump, 0:end");
 
 			int menu = stdIn.nextInt();
-			if (menu == 0) break;
+			if (menu == 0)
+				break;
 
 			int x;
 			switch (menu) {
-			 case 1: 							// 인큐
-				System.out.print("데이터：");
+			case 1:
+				/*
+					 * Exception in thread "main" java.lang.NullPointerException: Cannot store to
+					 * int array because "this.que" is null at
+					 * c_study_exercise.chap04.IntQueue.enque(IntQueue.java:32) at
+					 * c_study_exercise.chap04.IntQueueTester.main(IntQueueTester.java:25)
+					 */
+				System.out.println("data : ");
 				x = stdIn.nextInt();
 				try {
 					s.enque(x);
-			 	} catch (IntQueue.OverflowIntQueueException e) {
-					System.out.println("큐가 가득 찼습니다.");
+				} catch (IntQueue.OverflowIntQueueException e) {
+					System.out.println("queue full");
 				}
-				break;
-
-			 case 2: 							// 디큐
+			case 2:
 				try {
-			 		x = s.deque();
-					System.out.println("디큐한 데이터는 " + x + "입니다.");
-			 	} catch (IntQueue.EmptyIntQueueException e) {
-					System.out.println("큐가 비어 있습니다.");
+					x = s.deque();
+					System.out.println("dequeue : " + x);
+				} catch (IntQueue.EmptyIntQueueException e) {
+					System.out.println("queue empty");
 				}
-				break;
-
-			 case 3: 							// 피크
+			case 3:
 				try {
-			 		x = s.peek();
-					System.out.println("피크한 데이터는 " + x + "입니다.");
-			 	} catch (IntQueue.EmptyIntQueueException e) {
-					System.out.println("큐가 비어 있습니다.");
+					x = s.peek();
+					System.out.println("peek : " + x);
+				} catch (IntQueue.EmptyIntQueueException e) {
+					System.out.println("queue empty");
 				}
-				break;
-
-			 case 4: 							// 덤프
+			case 4:
 				s.dump();
 				break;
 			}
-		}
-	}
-}
+
+		} // while
+
+	}// main
+}// Class IntQueueTester
