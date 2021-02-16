@@ -9,7 +9,7 @@ class QueenBB {
 	static void print() {
 		for (int i = 0; i < 8; i++)
 			System.out.printf("%2d", pos[i]);
-		System.out.println();
+		System.out.println();  
 	}
 
 	// i열의 알맞은 위치에 퀸을 배치합니다. 
