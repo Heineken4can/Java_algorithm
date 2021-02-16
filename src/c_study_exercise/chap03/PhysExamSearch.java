@@ -2,6 +2,8 @@ package c_study_exercise.chap03;
 import java.util.Arrays;
 import java.util.Scanner;
 import java.util.Comparator;
+
+import java.util.Comparator;
 // 신체검사 데이터 배열에서 이진 검색하기
 
 class PhysExamSearch {
@@ -45,13 +47,16 @@ class PhysExamSearch {
 			new PhyscData("이수민", 175, 2.0),
 		};
 		System.out.print("몇 cm인 사람을 찾고 있나요?：");
-		int height = stdIn.nextInt();						// 키 값 입력
-		int idx = Arrays.binarySearch(
-						x,									// 배열x에서 
-						new PhyscData("", height, 0.0),		// 키가 height인 요소를 
-						PhyscData.HEIGHT_ORDER				// HEIGHT_ORDER에 의해  검색
-					 );
 
+		int height = stdIn.nextInt();
+		int idx = Arrays.binarySearch(
+									x,
+									new PhyscData("", height, 0.0),
+									PhyscData.HEIGHT_ORDER
+				);
+				
+				
+				
 		if (idx < 0)
 			System.out.println("요소가 없습니다.");
 		else {

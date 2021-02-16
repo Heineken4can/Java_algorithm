@@ -2,7 +2,7 @@ package a_exercise.chap03;
 import java.util.Arrays;
 import java.util.Scanner;
 // 문자열의 배열(Java의 키워드)에서 검색
-
+// 3-6
 class StringBinarySearch {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);

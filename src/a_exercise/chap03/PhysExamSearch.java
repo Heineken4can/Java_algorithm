@@ -3,7 +3,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 import java.util.Comparator;
 // 신체검사 데이터 배열에서 이진 검색하기
-
+// 3-8
 class PhysExamSearch {
 	// 신체검사 데이터를 정의합니다.
 	static class PhyscData {

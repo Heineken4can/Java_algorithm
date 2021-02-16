@@ -20,12 +20,12 @@ class StringBinarySearch {
 			"switch",     "synchronized", "this",      "throw",      "throws",
 			"transient",  "try",          "void",      "volatile",   "while"
 		};
-
-		System.out.print("원하는 기워드를 입력하세요 : ");	// 키값을 입력
+		System.out.println("keyword search : ");
 		String ky = stdIn.next();
-
-		int idx = Arrays.binarySearch(x, ky);		// 배열 x에서 값이 ky인 요소를 검색
-
+		
+		int idx = Arrays.binarySearch(x, ky);
+		
+		
 		if (idx < 0)
 			System.out.println("해당 키워드가 없습니다.");
 		else

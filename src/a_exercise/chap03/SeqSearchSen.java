@@ -1,7 +1,7 @@
 package a_exercise.chap03;
 import java.util.Scanner;
 // 선형 검색(보초법)
-
+// 3-3
 class SeqSearchSen {
 	// 요솟수가 n인 배열 a에서 key와 같은 요소를 보초법으로 선형 검색합니다.
 	static int seqSearchSen(int[] a, int n, int key) {

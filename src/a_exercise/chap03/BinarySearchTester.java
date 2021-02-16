@@ -2,7 +2,7 @@ package a_exercise.chap03;
 import java.util.Arrays;
 import java.util.Scanner;
 // Arrays.binarySearch로 이진 검색
-
+// 3-5
 class BinarySearchTester {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);

@@ -1,6 +1,6 @@
 package a_exercise.chap03;
 // 아이디를 부여하는 클래스
-
+// 3C-1
 class Id {
 	private static int counter = 0;		// 아이디를 몇 개 부여했는지 저장
 	private int id;						// 아이디

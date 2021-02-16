@@ -1,15 +1,15 @@
 package a_exercise.chap03;
 import java.util.Scanner;
 // 이진 검색 
-
+// 3-4
 class BinSearch {
 	// 요솟수가 n인 배열 a에서 key와 같은 요소를 이진 검색합니다.
 	static int binSearch(int[] a, int n, int key) {
-		int pl = 0;			// 검색 범위의 첫 인덱스
-		int pr = n - 1;		// 검색 범위의 끝 인덱스
+		int pl = 0;			// 검색 범위의 첫 인덱스, point leader??
+		int pr = n - 1;		// 검색 범위의 끝 인덱스, point rear? 
 
 		do {
-			int pc = (pl + pr) / 2;		// 중앙 요소의 인덱스
+			int pc = (pl + pr) / 2;		// 중앙 요소의 인덱스, point center?
 			if (a[pc] == key)
 				return pc;				// 검색 성공!
 			else if (a[pc] < key)
