@@ -1,7 +1,7 @@
 package a_exercise.chap04;
 import java.util.Scanner;
 // int형 스택의 사용 예
-
+// 4-2
 class IntStackTester {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);

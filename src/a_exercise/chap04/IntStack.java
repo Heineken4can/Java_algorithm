@@ -1,6 +1,6 @@
 package a_exercise.chap04;
 // int형 스택
-
+// 4-1[A]
 public class IntStack {
 	private int max;			// 스택 용량
 	private int ptr;			// 스택 포인터
