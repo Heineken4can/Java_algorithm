@@ -1,6 +1,6 @@
 package a_exercise.chap05;
 // 각 열에 1개의 퀸을 배치하는 조합을 재귀적으로 나열합니다.
-
+// 5-7
 class QueenB {
 	static int[] pos = new int[8];	// 각 열의 퀸의 위치
 
