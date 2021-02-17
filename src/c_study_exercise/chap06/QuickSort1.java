@@ -33,7 +33,7 @@ class QuickSort1 {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 
-		System.out.println("퀵 정렬");
+		System.out.println("퀵 정렬 11");
 		System.out.print("요솟수：");
 		int nx = stdIn.nextInt();
 		int[] x = new int[nx];

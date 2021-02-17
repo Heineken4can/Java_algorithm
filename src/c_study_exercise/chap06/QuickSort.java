@@ -10,25 +10,27 @@ class QuickSort {
 
 	// 퀵 정렬
 	static void quickSort(int[] a, int left, int right) {
-		int pl = left;					// 왼쪽 커서
-		int pr = right;					// 오른쪽 커서
-		int x = a[(pl + pr) / 2];		// 피벗
-
+		int pl = left; 
+		int pr = right;
+		int x = a[(pl + pr) / 2];
+		
 		do {
-			while (a[pl] < x) pl++;
+			while (a[pl] < x) pl++; 
 			while (a[pr] > x) pr--;
-			if (pl <= pr)
+			if (pl <= pr) {
 				swap(a, pl++, pr--);
-		} while (pl <= pr);
-
-		if (left < pr)  quickSort(a, left, pr);
+			}
+		} while (pl <= pr); 
+		
+		if (left < pr) quickSort(a, left, pr);
 		if (pl < right) quickSort(a, pl, right);
+		
 	}
 
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 
-		System.out.println("퀵 정렬");
+		System.out.println("퀵 정렬 11");
 		System.out.print("요솟수：");
 		int nx = stdIn.nextInt();
 		int[] x = new int[nx];

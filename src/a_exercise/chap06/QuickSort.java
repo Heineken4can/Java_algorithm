@@ -1,7 +1,7 @@
 package a_exercise.chap06;
 import java.util.Scanner;
 // 퀵 정렬
-
+// 6-9
 class QuickSort {
 	// 배열 요소 a[idx1]과 a[idx2]의 값을 바꿉니다.
 	static void swap(int[] a, int idx1, int idx2) {

@@ -1,7 +1,7 @@
 package a_exercise.chap06;
 import java.util.Scanner;
 // 퀵 정렬 (배열을  나누는 과정을 나타냄）
-
+// 6C-1
 class QuickSort1 {
 	// 배열 요소 a[idx1]과 a[idx2]의 값을 바꿉니다.
 	static void swap(int[] a, int idx1, int idx2) {
