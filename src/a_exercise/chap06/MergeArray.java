@@ -1,7 +1,7 @@
 package a_exercise.chap06;
 import java.util.Scanner;
 // 정렬을 마친 배열의 병합
-
+// 6-11
 class MergeArray {
 	// 정렬을 마친 배열 a, b를 병합하여 배열 c에 저장합니다. 
 	static void merge(int[] a, int na, int[] b, int nb, int[] c) {

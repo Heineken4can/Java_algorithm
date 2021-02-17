@@ -1,7 +1,7 @@
 package a_exercise.chap06;
 import java.util.Scanner;
 // 병합 정렬
-
+// 6-12
 class MergeSort {
 	static int[] buff;	// 작업용 배열
 
