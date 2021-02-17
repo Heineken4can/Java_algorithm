@@ -1,7 +1,7 @@
 package a_exercise.chap06;
 import java.util.Scanner;
 // 셸 정렬(버전 1)
-
+// 6-6
 class ShellSort {
 	//셸 정렬
 	static void shellSort(int[] a, int n) {

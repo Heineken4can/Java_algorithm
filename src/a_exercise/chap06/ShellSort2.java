@@ -1,7 +1,7 @@
 package a_exercise.chap06;
 import java.util.Scanner;
 // 셸 정렬(버전2, h의 값은 …, 40, 13, 4, 1）
-
+// 6-7
 class ShellSort2 {
 	// 셸정렬
 	static void shellSort(int[] a, int n) {

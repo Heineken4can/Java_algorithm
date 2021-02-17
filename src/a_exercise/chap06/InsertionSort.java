@@ -1,7 +1,7 @@
 package a_exercise.chap06;
 import java.util.Scanner;
 // 단순 삽입 정렬
-
+// 6-5
 class InsertionSort {
 	// 단순 삽입 정렬
 	static void insertionSort(int[] a, int n) {
