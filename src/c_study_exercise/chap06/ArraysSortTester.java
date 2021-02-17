@@ -16,8 +16,10 @@ class ArraysSortTester {
 			x[i] = stdIn.nextInt();
 		}
 
-		Arrays.sort(x);				// 배열 x를 정렬합니다.
-
+		System.out.println("오름차순으로 정렬했습니다.");
+		for (int i = 0; i < num; i++)
+			System.out.println("x[" + i + "]＝" + x[i]);
+		Arrays.sort(x);
 		System.out.println("오름차순으로 정렬했습니다.");
 		for (int i = 0; i < num; i++)
 			System.out.println("x[" + i + "]＝" + x[i]);

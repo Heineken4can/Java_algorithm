@@ -1,7 +1,7 @@
 package a_exercise.chap06;
 import java.util.Scanner;
 // 도수 정렬
-
+// 6-17
 class Fsort {
 	// 도수 정렬(0 이상 max 이하의 값을 입력합니다） 
 	static void fSort(int[] a, int n, int max) {

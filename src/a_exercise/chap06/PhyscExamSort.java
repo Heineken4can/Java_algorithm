@@ -3,7 +3,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 import java.util.Comparator;
 // 신체검사 데이터 배열을 정렬합니다.
-
+// 6-15
 class PhyscExamSort {
 	// 신체검사 데이터
 	static class PhyscData {
