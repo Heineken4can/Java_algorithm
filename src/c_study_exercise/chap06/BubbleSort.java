@@ -1,7 +1,8 @@
 package c_study_exercise.chap06;
+//package a_exercise.chap06;
 import java.util.Scanner;
 // 버블 정렬(버전 1)
-
+// 6-1
 class BubbleSort {
 	// a[idx1]와 a[idx2]의 값을 바꿉니다. 
 	static void swap(int[] a, int idx1, int idx2) {
@@ -21,7 +22,7 @@ class BubbleSort {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 
-		System.out.println("버블 정렬(버전 1)");
+		System.out.println("버블 정렬(버전 1111)");
 		System.out.print("요솟수：");
 		int nx = stdIn.nextInt();
 		int[] x = new int[nx];

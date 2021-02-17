@@ -7,7 +7,7 @@ class ArraysSortTester {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 
-		System.out.print("요솟수：");
+		System.out.print("요솟수1：");
 		int num = stdIn.nextInt();
 		int[] x = new int[num];		// 배열의 크기는 num입니다.
 

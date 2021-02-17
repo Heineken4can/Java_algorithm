@@ -11,18 +11,19 @@ class SelectionSort {
 	// 단순 선택 정렬
 	static void selectionSort(int[] a, int n) {
 		for (int i = 0; i < n - 1; i++) {
-			int min = i;			// 아직 정렬되지 않은 부분에서 가장 작은 요소의 인덱스를 기록합니다.
-			for (int j = i + 1; j < n; j++)
+			int min = i; 
+			for (int j = i + 1; j < n; j++) {
 				if (a[j] < a[min])
 					min = j;
-			swap(a, i, min);		// 아직 정렬되지 않은 부분의 첫 요소와 가장 작은 요소를 교환합니다.
+			}
+			swap(a, i, min);
 		}
 	}
 
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 
-		System.out.println("단순 선택 정렬");
+		System.out.println("단순 선택 정렬 1");
 		System.out.print("요솟수：");
 		int nx = stdIn.nextInt();
 		int[] x = new int[nx];
