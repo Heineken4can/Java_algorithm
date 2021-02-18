@@ -1,7 +1,7 @@
 package a_exercise.chap08;
 import java.util.Scanner;
 // Boyer-Moore법으로 문자열을 검색 
-
+// 8-4
 class BMmatch {
 	// Boyer-Moore법으로 문자열을 검색 
 	static int bmMatch(String txt, String pat) {
