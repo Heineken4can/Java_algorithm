@@ -1,6 +1,6 @@
-package a_exercise.chap07;
+package c_study_exercise.chap07;
 // toString 메서드의 오버라이드 차이점 확인하기
-// 7C-1
+
 class A {
 	// toString을 정의하지 않습니다.
 }

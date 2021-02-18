@@ -1,6 +1,6 @@
 package a_exercise.chap07;
 // int형 집합
-
+// 7-1A
 public class IntSet {
 	private int max;			// 집합의 최대 개수
 	private int num;			// 집합의 요소 개수
