@@ -1,7 +1,7 @@
 package a_exercise.chap08;
 import java.util.Scanner;
 // String.indexOf, String.lastIndexOf 메소드에 의한 문자열 검색합니다.
-
+// 8-2
 class IndexOfTester {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);

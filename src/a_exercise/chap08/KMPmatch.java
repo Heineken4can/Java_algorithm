@@ -1,7 +1,7 @@
 package a_exercise.chap08;
 import java.util.Scanner;
 // KMP법에 의한 문자열 검색
-
+// 8-3
 class KMPmatch {
 	// KMP법에 의한 문자열 검색
 	static int kmpMatch(String txt, String pat) {
@@ -40,7 +40,7 @@ class KMPmatch {
 	public static void main(String[] args) {
 		Scanner stdIn = new Scanner(System.in);
 
-		System.out.print("텍스트：");
+		System.out.print("텍스트1：");
 		String s1 = stdIn.next(); 					// 텍스트용 문자열 
 
 		System.out.print("패턴：");
