@@ -1,7 +1,7 @@
 package a_exercise.chap08;
 import java.util.Scanner;
 // 브루트-포스법으로 문자열을 검색하는 프로그램
-
+// 8-1
 class BFmatch {
 	// 브루트-포스법으로 문자열을 검색하는 메서드 
 	static int bfMatch(String txt, String pat) {
