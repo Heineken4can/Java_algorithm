@@ -1,7 +1,7 @@
 package a_exercise.chap09;
 import java.util.Comparator;
 // 연결 리스트 클래스
-
+// 9-1A
 public class LinkedList<E> {
 	// 노드
 	class Node<E> {

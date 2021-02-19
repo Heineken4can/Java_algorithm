@@ -1,8 +1,8 @@
-package a_exercise.chap09;
+package c_study_exercise.chap09;
 import java.util.Scanner;
 import java.util.Comparator;
 // 연결 리스트 클래스 LinkedList<E>의 사용 예
-// 9-20
+
 public class LinkedListTester {
 	static Scanner stdIn = new Scanner(System.in);
 
