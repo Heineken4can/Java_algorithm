@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Runner1 {
+public class Runner_sol {
 	//static String[] participant = { "leo", "kiki", "eden" };
 	//static String[] completion = { "eden", "kiki" };
 	
@@ -22,7 +22,7 @@ public class Runner1 {
 		bw.close();
 	}
 
-
+//https://codevang.tistory.com/289?category=827588
 	static String solution1(String[] participant, String[] completion) {
 		String answer = "";
 		Arrays.sort(participant);
