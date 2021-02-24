@@ -1,7 +1,7 @@
 package programmers.hash;
 
 import java.util.HashMap;
-import java.util.Map;
+import java.util.Iterator;
 
 public class Spy_camouflage_test {
 
@@ -13,16 +13,24 @@ public class Spy_camouflage_test {
 	
 	public static int solution1(String[][] clothes) {
 		int answer = 1;
-		Map<String, Integer> clothesMap = new HashMap<>();
-		for (int i = 0; i < clothes.length; i++) {
-			clothesMap.put(clothes[i][1], clothesMap.getOrDefault(clothes[i][1], 0) + 1);
+		
+		HashMap<String, Integer> clothesMap = new HashMap<>();
+		for ( int i = 0; i < clothes.length; i++) {
+			String key = clothes[i][1];
+			if (!clothesMap.containsKey(key)) {
+				clothesMap.put(key, 1);
+			} else {
+				clothesMap.put(key, clothesMap.get(key) + 1);
+			}
+			
+		}//for
+		
+		Iterator<Integer> it = clothesMap.values().iterator();
+		while (it.hasNext()) {
+			answer *= it.next().intValue() + 1;
 		}
 		
-		for (int val : clothesMap.values()) {
-			answer *= (val + 1);
-		}
-		return answer-1;
-			
-	}
+		return answer - 1; 
+	}//solution
 
 }
