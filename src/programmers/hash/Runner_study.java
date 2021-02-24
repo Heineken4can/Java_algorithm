@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Runner3_study {
+public class Runner_study {
 	
 //	static String[] participant = { "leo", "kiki", "eden" };
 //	static String[] completion = { "eden", "kiki" };
