@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
-public class Kmunber_test {
+public class Knumber_test {
 
 
 	public static void main(String[] args) {
