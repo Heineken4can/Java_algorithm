@@ -26,7 +26,7 @@ class Fruit implements Comparable<Fruit> {
 	@Override
 	public int compareTo(Fruit other) {
 		if (this.score < other.score) {
-			return -1;
+			return -1; 
 		}
 		return 1;
 	}
