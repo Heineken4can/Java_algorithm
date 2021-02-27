@@ -2,7 +2,7 @@ package exercise.c_ndb796.a_basic.h_graph_theory;
 
 import java.util.Scanner;
 
-public class A_disjointNumber {
+public class A_disjointNumber2 {
 
 	// 노드의 개수(V)와 간선(Union 연산)의 개수(E)
 	// 노드의 개수는 최대 100,000개라고 가정

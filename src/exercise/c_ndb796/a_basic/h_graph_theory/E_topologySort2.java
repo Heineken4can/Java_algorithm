@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
-public class E_topologySort {
+public class E_topologySort2 {
 
 	// 노드의 개수(V)와 간선의 개수(E)
 	// 노드의 개수는 최대 100,000개라고 가정

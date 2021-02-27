@@ -2,7 +2,7 @@ package exercise.c_ndb796.a_basic.h_graph_theory;
 
 import java.util.Scanner;
 
-public class A_disjointNumber {
+public class B_disjointNumber_pathCompression2 {
 
 	// 노드의 개수(V)와 간선(Union 연산)의 개수(E)
 	// 노드의 개수는 최대 100,000개라고 가정
@@ -14,7 +14,7 @@ public class A_disjointNumber {
 		// 루트 노드가 아니라면, 루트 노드를 찾을 때까지 재귀적으로 호출
 		if (x == parent[x])
 			return x;
-		return findParent(parent[x]);
+		return parent[x] = findParent(parent[x]);
 	}
 
 	// 두 원소가 속한 집합을 합치기
