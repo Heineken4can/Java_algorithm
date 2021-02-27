@@ -1,4 +1,4 @@
-package practice.a_company_coding_test.coupang_pay;
+package practice.a_company_coding_test.coupang_pay_20210227;
 
 public class A {
 
