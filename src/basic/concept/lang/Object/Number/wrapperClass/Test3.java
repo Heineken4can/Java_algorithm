@@ -1,4 +1,4 @@
-package basic.concept.wrapperClass;
+package basic.concept.lang.Object.Number.wrapperClass;
 
 //http://theeye.pe.kr/archives/457
 public class Test3 {

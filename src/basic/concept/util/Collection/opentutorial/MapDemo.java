@@ -1,4 +1,4 @@
-package basic.concept.collection.opentutorial;
+package basic.concept.util.Collection.opentutorial;
 
 import java.util.HashMap;
 import java.util.Iterator;

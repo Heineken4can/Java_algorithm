@@ -1,4 +1,4 @@
-package basic.concept.collection.opentutorial;
+package basic.concept.util.Collection.opentutorial;
 //https://opentutorials.org/course/1223/6446
 //배열과 ArrayList의 차이점.
 

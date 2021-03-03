@@ -1,4 +1,4 @@
-package basic.concept.wrapperClass;
+package basic.concept.lang.Object.Number.wrapperClass;
 
 //https://coding-factory.tistory.com/547
 public class Test2 {
