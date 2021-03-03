@@ -3,7 +3,7 @@ package basic.concept.lang.Object.Character;
 
 //https://www.tutorialspoint.com/java/lang/character_isletter.htm
 
-public class Test1 {
+public class Methods {
 
 	public static void main(String[] args) {
 
@@ -68,7 +68,7 @@ public class Test1 {
 		char firstValue = 'c';
 		char secondValue = 'c';
 		char thirdValue = 'e';
-		//Character.compare는 두 매개변수의 값을 빼줌. 0이 나오면 같다는 것. 
+		//Character.compare는 두 매개변수의 값을 빼줌. 0이 나오면 같다는 것!! 
 		int compareOneTwo = Character.compare(firstValue, secondValue);
 
 		// compare the first char to the third

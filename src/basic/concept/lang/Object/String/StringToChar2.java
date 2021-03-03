@@ -11,7 +11,6 @@ public class StringToChar2 {
 
 		// 1-1.charAt() 이용하기
 		System.out.println("\n1-1.charAt() 이용하기 ============>");
-		System.out.println("1 ============>");
 		String krstr = "안녕하세요";
 		char c = krstr.charAt(0);
 		System.out.println(c);
@@ -39,6 +38,10 @@ public class StringToChar2 {
 			System.out.println(c3);
 		}
 
+		
+		
+		
+		
 		// 2] char to String (char -> String)
 		System.out.println("\n\n2] ========================>");
 
@@ -65,6 +68,10 @@ public class StringToChar2 {
 		System.out.println(c5);
 		System.out.println(str5);
 
+		
+		
+		
+		
 		// 3] 실행 속도 비교 코드
 		// [2-1.valueOf()] vs [2-3."" 이용하기]
 		System.out.println("\n\n3] ========================>");

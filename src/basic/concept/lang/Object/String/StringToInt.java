@@ -9,11 +9,13 @@ public class StringToInt {
 		
 		System.out.println("\n1. int to String ============>");
 		int i1 = 43;
-		String str1 = Integer.toString(i1);
-		String str2 = "" + i1;
+		String str1 = Integer.toString(i1); // 방법 1
+		String str11 = "" + i1;             // 방법 2
+		String str111 = String.valueOf(i1); // 방법 3
 		System.out.println(i1);
 		System.out.println(str1);
-		System.out.println(str2);
+		System.out.println(str11);
+		System.out.println(str111);
 		
 
 		System.out.println("\n2. String to int ============>");

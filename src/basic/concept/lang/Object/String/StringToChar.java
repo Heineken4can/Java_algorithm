@@ -10,14 +10,14 @@ public class StringToChar {
 		// 1]. String --> char[] : CHAR형 ARRAY를 하나씩 꺼내 CHARACTER.TOSTRING으로 변환
 		System.out.println("1] ============>");
 		
-		System.out.println("1 ============>");
+		System.out.println("\n1 ============>");
 		// 1. String --> char[]
 		String temp = "캐릭터 변환하기";
 		char[] array = temp.toCharArray();
 		String change = "";
 		
 		//System.out.println(temp);
-		System.out.println(array);
+		System.out.println(array);//캐릭터 변환하기
 		//System.out.println(change);
 		
 		System.out.println("\n2 ============> : " + array.length);
@@ -37,7 +37,7 @@ public class StringToChar {
 		
 		//2]. char[] --> String : 캐릭터형 배열 CHAR[] 를 바로 STRING으로 변환
 		System.out.println("\n\n2] ============>");
-		System.out.println("1 ============>");
+		System.out.println("\n1 ============>");
 		char[] ary = {'a','b','c','d','e'};
 		//Arrays.sort(ary); //테스트삼아 작성해봄. char배열도 sort 되는구나
 		String arrayString = String.valueOf(ary);
