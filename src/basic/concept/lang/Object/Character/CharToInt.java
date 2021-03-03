@@ -12,16 +12,36 @@ public class CharToInt {
 		System.out.println(num.charAt(0));// 1
 		// 1 같은 경우는 결과값이 1이 나오지만 사실 그 1은 '1'이에요. 즉 문자로서 출력된거에요~~
 		
+		
 		System.out.println("\n2.  ============>");
 		int a = num.charAt(0);
 		System.out.println(a);// 49
 		// 2 같은 경우는 문자 '1'이 int형 변수에 들어가서 문자'1'에 해당하는 아스키코드 49로 변환됩니다.
+		 
 		
 		System.out.println("\n3.  ============>");
 		int b = num.charAt(0) - '0';//아스키코드 49 - 아스키코드 48 = 1 이 출렵됨.
 		int c = '0';
 		System.out.println(b);// 1
 		System.out.println(c);// 49
+		
+		
+		System.out.println("\n41.  ============>");
+		int d = num.charAt(0) - 'a' + 1; 
+		char ch1 = 'a';
+		System.out.println(num.charAt(0));// 
+		System.out.println(ch1);
+		System.out.println('a');
+		System.out.println("a");
+		
+		System.out.println("\n42.  ============>");
+		System.out.println(1);
+		System.out.println(num.charAt(0) - 'a');// 
+		System.out.println('1' - 'a');//
+		
+		System.out.println("\n43.  ============>");
+		System.out.println(num.charAt(0) - 'a' + 1);
+		System.out.println(d);
 		
 		/*
 		 * 1같은 경우는 결과값이 1이 나오지만 사실 그 1은 '1'이에요. 즉 문자로서 출력된거에요~~
