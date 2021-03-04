@@ -5,7 +5,6 @@ public class CharToInt {
 
 	public static void main(String[] args) {
 
-	
 
 		System.out.println("\n1.  ============>");
 		String num = "123123"; // 이렇게 num을 초기화까지 진행하고
