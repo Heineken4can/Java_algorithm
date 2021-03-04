@@ -1,7 +1,7 @@
-package basic.concept.lang.Object.Number.Integer;
+package basic.concept.lang.Object.String;
 //출처: https://mine-it-record.tistory.com/133 [나만의 기록들]
 
-public class CompareTO {
+public class CompareTo {
 	public static void main(String... args) {
 		
 		

@@ -1,7 +1,7 @@
-package basic.concept.lang.Object.String;
+package basic.concept.lang.Object.Number.Integer;
 //출처: https://mine-it-record.tistory.com/133 [나만의 기록들]
 
-public class CompareTO {
+public class CompareTo {
 	public static void main(String... args) {
 		
 		
@@ -42,10 +42,30 @@ public class CompareTO {
         System.out.println( x.compareTo(2) );  //  1
         System.out.println( z.compareTo(2.7) );  //  -1
 
+        
 		//[ 기준값.compareTo( 비교대상 ) ],  int 로 선언하고 비교하는 방법
         System.out.println("\n2 =========>");
         int x2 = 4;  int y2 = 5;
         System.out.println(Integer.compare(x2,y2));
+        System.out.println(Integer.compare(x2,4));
+        System.out.println(Integer.compare(x2,3));
+        System.out.println(Integer.compare(x2,2));
         
-	}
+        
+        // 3. 숫자 비교
+        System.out.println("\n3 =========>");
+        Integer x3 = 3;
+        Integer y3 = 3;
+        Integer z3 = 1;
+        
+        System.out.println(x3.compareTo(1));     
+        System.out.println(Integer.compare(x3,y3)); //같아야 0
+        System.out.println(Integer.compare(x3,z3));
+        System.out.println(x3.compareTo(y3)); 
+        System.out.println(x3.compareTo(z3)); 
+        System.out.println(z3.compareTo(x3));//빼기를 하는구나 
+        //*사실상 그냥 빼기,//*int 안됨. Integer 같은 자료형만 가능.
+	
+	
+	}//main
 }

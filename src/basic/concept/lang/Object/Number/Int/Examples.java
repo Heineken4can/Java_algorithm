@@ -8,12 +8,19 @@ public class Examples {
 	
 	public static void main(String[] args) {
 
-		System.out.println("1]  =====================>");
+		//System.out.println("1]  =====================>");
 		System.out.println("\n1.  ============>");			
 		System.out.println(INF);
 		System.out.println(aa);
 		
 		
+		//int형 숫자의 자리수 구하기
+		System.out.println("\n2.  ============>");	
+		int num = 3648;
+		int length = (int)(Math.log10(num)+1);
+		System.out.println("길이 : " + length);
+	
+
 		
 	}
 }
