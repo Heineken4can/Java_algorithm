@@ -1,4 +1,4 @@
-package basic.concept.util.Collection.Collections;
+package basic.concept.util.Collections;
 //https://devlog-wjdrbs96.tistory.com/68
 
 import java.util.ArrayList;
