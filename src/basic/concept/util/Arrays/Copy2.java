@@ -33,7 +33,8 @@ public class Copy2 {
 		
 		
 		System.out.println("\n\n1 =========>");
-		// Object.clone(),Array.clone()을 사용하면 배열을 쉽게 복사할 수 있습니다. (깊은 복사) 가장 보편적인 방법입니다.
+		//(깊은 복사) 가장 보편적인 방법입니다.
+		//Object.clone(),Array.clone()을 사용하면 배열을 쉽게 복사할 수 있습니다. 
         int[] a1 = { 1, 2, 3, 4 };
         int[] b1 = a1.clone();
         System.out.println(Arrays.toString(a1));
@@ -55,6 +56,7 @@ public class Copy2 {
 		
         
         System.out.println("\n\n4 =========>");
+        //deep copy네 : arraycopy
         int[] a4 = { 1, 2, 3, 4 };
         int[] b4 = new int[a4.length];
         System.arraycopy(a4, 0, b4, 0, a4.length);
