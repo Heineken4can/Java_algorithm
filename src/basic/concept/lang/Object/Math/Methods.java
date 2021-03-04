@@ -2,7 +2,7 @@ package basic.concept.lang.Object.Math;
 //https://iamfreeman.tistory.com/entry/java-Math-%EC%82%AC%EC%9A%A9%EB%B2%95
 
 import java.lang.Math;
-public class Test1 {
+public class Methods {
 	
 
 		public static void main(String[] args) {
