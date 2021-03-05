@@ -60,17 +60,17 @@ public class Examples3 {
 
 		
 		System.out.println("\n4. addAll(Collection<? extends E> c) ===============>  ");
-		ArrayList<Integer> newNumbers = new ArrayList<>();
+		ArrayList<Integer> newNumbers4 = new ArrayList<>();
 		ArrayList<Integer> numbers4 = new ArrayList<>();
-	    newNumbers.add(60);
-	    newNumbers.add(70);
-	    newNumbers.add(80);
-	    newNumbers.add(90);
-	    newNumbers.add(100);
+	    newNumbers4.add(60);
+	    newNumbers4.add(70);
+	    newNumbers4.add(80);
+	    newNumbers4.add(90);
+	    newNumbers4.add(100);
 	    
-	    numbers4.addAll(newNumbers);
-	    System.out.println(numbers4); 
-
+	    numbers4.addAll(newNumbers4);
+	    System.out.println(newNumbers4); 
+	    System.out.println(numbers4);
 	    
 	    
 		System.out.println("\n5. addAll(int index, Collection<? extends E> c) ===============>  ");
@@ -82,6 +82,8 @@ public class Examples3 {
 	    newNumbers5.add(90);
 	    newNumbers5.add(100);
 
+	    System.out.println(numbers4);
+	    System.out.println(newNumbers5);
 	    numbers4.addAll(2 , newNumbers5);
 	    System.out.println(numbers4);
 	    numbers4.addAll(newNumbers5);
@@ -96,8 +98,9 @@ public class Examples3 {
         numbers6.add(30);
         numbers6.add(40);
         numbers6.add(50);
+        System.out.println(numbers6); 
         numbers6.clear();
-
+        System.out.println(numbers6); 
         
         
 		System.out.println("\n7. clone()  ===============>  ");
@@ -107,21 +110,23 @@ public class Examples3 {
         numbers7.add(30);
         numbers7.add(40);
         numbers7.add(50);
-
+        System.out.println(numbers7); 
         numbers7.add(1, 15);
-        ArrayList<Integer> newnumbers7 = (ArrayList<Integer>) numbers7.clone();
-
+        System.out.println(numbers7); 
+        ArrayList<Integer> newnumbers7 = (ArrayList<Integer>) numbers7.clone();//깊은 복사
+        System.out.println(newnumbers7); 
         
 
 		System.out.println("\n8. contains(Object o)  ===============>  ");
 		ArrayList<Integer> newNumbers8 = new ArrayList<>();
+		ArrayList<Integer> numbers8 = new ArrayList<>();
 	    newNumbers8.add(60);
 	    newNumbers8.add(70);
 	    newNumbers8.add(80);
 	    newNumbers8.add(90);
 	    newNumbers8.add(100);
-	    numbers7.addAll(newNumbers8);
-	    if (numbers7.contains(100)) {
+	    numbers8.addAll(newNumbers8);
+	    if (numbers8.contains(100)) {
 	        System.out.println("100을 가지고 있습니다.");
 	    } else {
 	        System.out.println("100을 가지고있지 않습니다.");
@@ -130,13 +135,14 @@ public class Examples3 {
 	    
 	    
 		System.out.println("\n9. forEach(Consumer<? super E> action)  ===============>  ");
-		numbers7.forEach(number -> System.out.println(number));
-
+		numbers8.forEach(number -> System.out.print(number + " "));
+		System.out.println();
+		
 		
 
 		System.out.println("\n10. get(int index)  ===============>  ");
-		if (!numbers7.isEmpty()) {
-		    System.out.println("첫 번째 엘리먼트 값 : " + numbers7.get(0));
+		if (!numbers8.isEmpty()) {
+		    System.out.println("첫 번째 엘리먼트 값 : " + numbers8.get(0));
 		}
 		
 		
@@ -149,7 +155,9 @@ public class Examples3 {
 	    numbers11.add(40);
 	    numbers11.add(50);
 	    numbers11.add(1, 15);
-
+	    System.out.println(numbers11);
+	    
+	    
 	    ArrayList<Integer> newNumbers11 = new ArrayList<>();
 	    newNumbers11.add(60);
 	    newNumbers11.add(70);
@@ -157,7 +165,9 @@ public class Examples3 {
 	    newNumbers11.add(90);
 	    newNumbers11.add(100);
 	    numbers11.addAll(newNumbers11);
-
+	    
+	    System.out.println(numbers11);
+	    System.out.println(newNumbers11);
 	    System.out.println(numbers11.indexOf(30));
 	    
 	    
@@ -170,7 +180,8 @@ public class Examples3 {
 	    numbers12.add(40);
 	    numbers12.add(50);
 	    numbers12.add(1, 15);
-
+	    System.out.println(numbers12);
+	    
 	    ArrayList<Integer> newNumbers12 = new ArrayList<>();
 	    newNumbers12.add(60);
 	    newNumbers12.add(70);
@@ -178,6 +189,7 @@ public class Examples3 {
 	    newNumbers12.add(90);
 	    newNumbers12.add(100);
 	    numbers12.addAll(newNumbers12);
+	    System.out.println(numbers12);
 	    System.out.println(numbers12.isEmpty());
 	    
 	    
@@ -186,32 +198,32 @@ public class Examples3 {
 		Iterator<Integer> iterator13 = numbers12.iterator();
 	    while (iterator13.hasNext()) {
 	        Integer next = iterator13.next();
-	        System.out.println(next);
+	        System.out.print(next + " ");
 
 	        if (numbers12.contains(10)) {
 	            iterator13.remove();
 	        }
 	    }
 
-	    System.out.println("----------------");
+	    System.out.println("");
 	    iterator13 = numbers.iterator();
 	    while (iterator13.hasNext()) {
 	        Integer next = iterator13.next();
-	        System.out.println(next);
+	        System.out.print(next + " ");
 	    }
 
 	    
 	    
-		System.out.println("\n14. lastIndexOf(Object o)  ===============>  ");
+		System.out.println("\n\n14. lastIndexOf(Object o)  ===============>  ");
 		ArrayList<Integer> numbers14 = new ArrayList<>();
-
 	    numbers14.add(10);
 	    numbers14.add(20);
 	    numbers14.add(30);
 	    numbers14.add(40);
 	    numbers14.add(50);
 	    numbers14.add(1, 15);
-
+	    System.out.println(numbers14);
+	    
 	    ArrayList<Integer> newNumbers14 = new ArrayList<>();
 	    newNumbers14.add(80);
 	    newNumbers14.add(70);
@@ -219,37 +231,44 @@ public class Examples3 {
 	    newNumbers14.add(90);
 	    newNumbers14.add(100);
 	    numbers14.addAll(newNumbers14);
-
+	    System.out.println(numbers14);
+	    
 	    System.out.println(numbers14.lastIndexOf(80));
 	    System.out.println(numbers14.lastIndexOf(50000));
 	    
 	    
 
 		System.out.println("\n15. listIterator()  ===============>  ");
+		System.out.println(numbers14);
+		
 		ListIterator<Integer> listIterator15 = numbers14.listIterator();
 	    while (listIterator15.hasNext()) {
-	        System.out.println(listIterator15.next());
+	        System.out.print(listIterator15.next() + " ");
 	    }
-
+	    System.out.println();
+	    
 	    while (listIterator15.hasPrevious()) {
-	        System.out.println(listIterator15.previous());
+	        System.out.print(listIterator15.previous() + " ");
 	    }
 
 	    
 	    
-		System.out.println("\n16. listIterator(int index) ===============>  ");
+		System.out.println("\n\n16. listIterator(int index) ===============>  ");
 		ListIterator<Integer> listIterator16 = numbers14.listIterator(5);
+		System.out.println(numbers14);
+		
 	    while (listIterator16.hasNext()) {
-	        System.out.println(listIterator16.next());
+	        System.out.print(listIterator16.next() + " ");
 	    }
-
-	    while (listIterator16.hasPrevious()) {
-	        System.out.println(listIterator16.previous());
+	    System.out.println();
+	    
+	    while (listIterator16.hasPrevious()) {//이건 개수가 전체가 나오지? index 5이후부터만 저장된게 아닌가?
+	        System.out.print(listIterator16.previous() + " ");
 	    }
 	    
 	    
 
-		System.out.println("\n17. remove(int index) ===============>  ");
+		System.out.println("\n\n17. remove(int index) ===============>  ");
 		ArrayList<Integer> numbers17 = new ArrayList<>();
 	    numbers17.add(10);
 	    numbers17.add(20);
@@ -257,21 +276,28 @@ public class Examples3 {
 	    numbers17.add(40);
 	    numbers17.add(50);
 	    numbers17.add(1, 15);
-
+	    System.out.println(numbers17);
+	    
 	    ArrayList<Integer> newNumbers17 = new ArrayList<>();
 	    newNumbers17.add(60);
 	    newNumbers17.add(70);
 	    newNumbers17.add(80);
 	    newNumbers17.add(90);
 	    newNumbers17.add(100);
+	    System.out.println(newNumbers17);
+	    
 	    numbers17.addAll(newNumbers17);
-	    numbers17.remove(0);
+	    System.out.println(numbers17);
+	    
+	    numbers17.remove(0);//이건 index에 해당하는 값을 제거한 것.
 	    System.out.println(numbers17);
 
 	    
 	    
 		System.out.println("\n18. remove(Object o) ===============>  ");
-		numbers17.remove(Integer.valueOf(100));
+		System.out.println(100);
+		System.out.println(Integer.valueOf(100));
+		numbers17.remove(Integer.valueOf(100));//이건 특정 값을 제거한 것.
 		System.out.println(numbers17);
 		
 		
@@ -283,10 +309,13 @@ public class Examples3 {
 	    numbers19.add(30);
 	    numbers19.add(40);
 	    numbers19.add(50);
-
+	    System.out.println(numbers19);
+	    
 	    ArrayList<Integer> newNumbers19 = new ArrayList<>();
 	    newNumbers19.add(30);
 	    newNumbers19.add(40);
+	    System.out.println(newNumbers19);
+	    
 	    numbers19.removeAll(newNumbers19);
 	    System.out.println(numbers19);
 
@@ -299,8 +328,9 @@ public class Examples3 {
 	    numbers21.add(30);
 	    numbers21.add(40);
 	    numbers21.add(50);
-
-	    if (numbers21.removeIf(n -> n % 3 == 0)) {
+	    System.out.println(numbers21);
+	    
+	    if (numbers21.removeIf(n -> n % 3 == 0)) {//알아서 반복문을 돌아서 제거해주나 보네
 	        System.out.println(numbers21);
 	    }
 
@@ -313,6 +343,7 @@ public class Examples3 {
 	    numbers22.add(30);
 	    numbers22.add(40);
 	    numbers22.add(50);
+	    System.out.println(numbers22);
 
 	    ArrayList<Integer> newNumbers22 = new ArrayList<>();
 	    newNumbers22.add(10);
@@ -320,7 +351,9 @@ public class Examples3 {
 	    newNumbers22.add(3);
 	    newNumbers22.add(4);
 	    newNumbers22.add(5);
-	    numbers22.retainAll(newNumbers22);
+	    System.out.println(newNumbers22);
+	    
+	    numbers22.retainAll(newNumbers22);//교집합을 남기라는 것
 	    System.out.println(numbers22);
 
 	    
@@ -332,6 +365,8 @@ public class Examples3 {
 	    numbers23.add(30);
 	    numbers23.add(40);
 	    numbers23.add(50);
+	    System.out.println(numbers23);
+	    
 	    numbers23.set(0, 100);
 	    System.out.println(numbers23);
 
@@ -345,18 +380,20 @@ public class Examples3 {
 	    numbers24.add(40);
 	    numbers24.add(50);
 	    for (int i = 0; i < numbers24.size(); i++) {
-	        System.out.println(numbers24.get(i));
+	        System.out.print(numbers24.get(i) + " ");
 	    }
 	    
 	    
 
-		System.out.println("\n25. sort(Comparator<? super E> c)  ===============>  ");
+		System.out.println("\n\n25. sort(Comparator<? super E> c)  ===============>  ");
 		ArrayList<Integer> numbers25 = new ArrayList<>();
 	    numbers25.add(10);
 	    numbers25.add(30);
 	    numbers25.add(20);
 	    numbers25.add(50);
 	    numbers25.add(40);
+	    System.out.println(numbers25);
+	    
 	    Collections.sort(numbers25);
 	    System.out.println(numbers25);
 	    
@@ -386,12 +423,12 @@ public class Examples3 {
 
 	    Integer[] array27 = numbers27.toArray(new Integer[numbers27.size()]);
 	    for (int i = 0; i < array27.length; i++) {
-	        System.out.println(array27[i]);
+	        System.out.print(array27[i] + " ");
 	    }
 	    
 	    
 
-		System.out.println("\n28. asList() ===============>  ");
+		System.out.println("\n\n28. asList() ===============>  ");
 		String[] array28 = new String[3];
 	    array28[0] = "오늘은";
 	    array28[1] = "즐거운";
