@@ -24,59 +24,52 @@ public class B_stringCompression2 {
 
 	}
 
-	public static int solution(String s) {
-		int min = s.length();
+	public static int solution(String argStr) {
+		int minCnt = argStr.length();//일단 최대값을 세팅함.
 
-		for (int i = 1; i <= s.length() / 2; i++) {
-			int compLeng = compression(s, i).length();
-			min = Math.min(min, compLeng);
+		for (int i = 1; i <= argStr.length() / 2; i++) { //i는 몇글자씩 자를지 
+			int compLeng = compression(argStr, i).length();
+			minCnt = Math.min(minCnt, compLeng);
 		}
-
-		return min;
+		return minCnt;
 	}
 
-	/**
-	 * 문자열 압축
-	 *
-	 * @param str 입력받은 문자열
-	 * @param i   i값
-	 * @return 압축된 문자열
-	 */
-	private static String compression(String str, int i) {
+	private static String compression(String argStr, int argStep) {
 
-		int count = 1;
-		String compression = "";
-		String pattern = "";
-
-		for (int j = 0; j <= str.length() + i; j += i) {
+		int compressionCnt = 1;//압축된 횟수
+		String compressionStr = "";//압축된 문자
+		String patternStr = "";//패턴 문자
+//ababcdcdababcdcd
+//0123456789
+		for (int j = 0; j <= argStr.length() + argStep; j += argStep) {
 
 			String nowStr;
 
 			// 전 문자열과 비교할 현재 문자열
-			if (j >= str.length()) { // 현재 문자열이 없을 때
+			if (j >= argStr.length()) { // 현재 문자열이 없을 때
 				nowStr = "";
-			} else if (str.length() < j + i) { // 마지막 현재 문자열일 때
-				nowStr = str.substring(j);
+			} else if (argStr.length() < j + argStep) { // 마지막 현재 문자열일 때
+				nowStr = argStr.substring(j);
 			} else {
-				nowStr = str.substring(j, j + i); // 그 외
+				nowStr = argStr.substring(j, j + argStep); // 그 외
 			}
 
 			// 1. 전 문자열이랑 똑같은지 비교한다. (맨 처음이면 비교 X)
 			if (j != 0) {
-				if (nowStr.equals(pattern)) { // 똑같으면
-					count++;
-				} else if (count >= 2) { // 다르고 count가 2회 이상이면 압축 가능
-					compression += count + pattern;
-					count = 1;
+				if (nowStr.equals(patternStr)) { // 똑같으면
+					compressionCnt++;
+				} else if (compressionCnt >= 2) { // 다르고 count가 2회 이상이면 압축 가능
+					compressionStr += compressionCnt + patternStr;
+					compressionCnt = 1;
 				} else { // 압축 불가능하면 그냥 그대로 문자열 이어붙이기
-					compression += pattern;
+					compressionStr += patternStr;
 				}
 			}
 			// 2. i 길이만큼 문자열을 자른다.
-			pattern = nowStr;
+			patternStr = nowStr;
 		}
 
-		return compression;
+		return compressionStr;
 	}
 
 	/*
