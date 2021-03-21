@@ -98,6 +98,7 @@ public class Examples {
 		}
 
 		Collection<Integer> values = fruits6.values();
+		//Set<Integer> values = (Set<Integer>) fruits6.values();//이건 런타임 오류남,컴파일은 되네
 		for (Integer value : values) {
 			System.out.println("value: " + value);
 		}

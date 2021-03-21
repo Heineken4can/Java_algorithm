@@ -2,7 +2,7 @@ package exercise.d_testForRamda256.a_callRecordSummary;
 /*
 1.문자열 뒤집기 (나동빈 11장 그리디)
 문제 : https://www.acmicpc.net/problem/1439
-답   : https://github.com/ndb796/python-for-coding-test/blob/master/11/3.java
+답   : https://dheldh77.tistory.com/entry/%EB%B0%B1%EC%A4%80-1439%EB%B2%88-%EB%92%A4%EC%A7%91%EA%B8%B0
 */
 
 import java.util.Scanner;
