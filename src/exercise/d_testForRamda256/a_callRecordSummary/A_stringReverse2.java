@@ -23,7 +23,7 @@ public class A_stringReverse2 {
 		String[] a = s.split("");
 		int zero = 0, one = 0;
 		
-		if(a[0].equals("0"))
+		if(a[0].equals("0"))//0을 바꾸는 경우(0-->1)
 			zero++;
 		else
 			one++;
