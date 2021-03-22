@@ -15,27 +15,40 @@ public class A_stringReverse4 {
 
 	public static void main(String[] args) {
 		String str2;
-		str2 = "001100010";
-		str2 = "110001010";
+		str2 = "01100010";
+		 str2 = "11000101110101011";
 
 		// 문제를 바꿔서 0을 뒤집을 때의 경우 구하기, 연속된 것만 뒤집을 수 있음.
 		String[] arrStr1 = str2.split("");
+		char[] arrCh1 = str2.toCharArray();
+		char tmpCh1 = str2.charAt(0);
+
 		int cntNum0 = 0;// 0을 바꾸는 경우 (0 -> 1)
+		int cntNum1 = 0;
 
-		if (arrStr1[0].equals("0")) {
+		if (str2.charAt(0) == '0') {
 			cntNum0++;
+		} else {
+			cntNum1++;
 		}
-		// 0이 연속된 경우의 수 구하기
-		for (int i = 0; i < arrStr1.length - 1; i++) {
-			if (!arrStr1[i].equals(arrStr1[i + 1])) {
-				if (arrStr1[i+1].equals("0")) {
-					cntNum0++;
-				}
-			} else {//같을 경우에는 카운트 하지 않음.
 
+		for (int i = 0; i < str2.length() - 1; i++) {
+			if (str2.charAt(i) != str2.charAt(i + 1)) {
+				if(str2.charAt(i) == '0') {
+					cntNum0++;
+				}else {
+					cntNum1++;
+				}
+			} else {
+				//아무것도 하지 않음.
 			}
 		}
 
-	System.out.println("11:"+cntNum0);
+		System.out.println("1:" + cntNum0);
+		System.out.println("2:" + cntNum1);
+		// 3. 더 작은 수
+		int result = Math.min(cntNum0, cntNum1);
+
+		System.out.println("11:" + result);
 	}// main
 }

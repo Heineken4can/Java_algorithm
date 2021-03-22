@@ -2,7 +2,7 @@ package exercise.d_testForRamda256.a_callRecordSummary;
 
 /*
 문제 : https://programmers.co.kr/learn/courses/30/lessons/60057
-답 : https://velog.io/@ajufresh/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EB%AC%B8%EC%9E%90%EC%97%B4-%EC%95%95%EC%B6%95-%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4-Java
+답 : https://cheonjoosung.github.io/blog/pg-compress
 
   s	              result
 "aabbaccc"	        7
@@ -24,45 +24,55 @@ public class B_stringCompression3 {
 
 	}
 
-	public static int solution(String s) {
-		int min = s.length();
-		for (int i = 1; i < s.length() / 2; i++) {// i는 몇글자씩 자를지 결정.
-			int compLeng = compression(s, i).length();
-			min = Math.min(min, compLeng);
-		}
-		return min;
-	}
+	public static int solution(String argStr) {
+		int answer = argStr.length();
 
-	private static String compression(String str, int i) {
-		int count = 1;
-		String compression = "";
-		String pattern = "";
+		for (int inxWidth = 1; inxWidth < argStr.length() / 2; inxWidth++) {
+			StringBuilder compressSb = new StringBuilder();
 
-		for (int j = 0; j < str.length() + i; j += i) {
-			String nowStr;
-			
-			if (j >= str.length()) {
-				nowStr = "";
-			} else if (str.length() < j + i) {
-				nowStr = str.substring(j);
-			} else {
-				nowStr = str.substring(j, j + i);
-			}
+			for (int j = 0; j < argStr.length(); j += inxWidth) {
+				String nowWord = "";
 
-			if ( j != 0 ) {
-				if (nowStr.equals(pattern)) {
-					count++;
-				} else if (count >= 2) {
-					compression += count + pattern;
+				if (j + inxWidth >= argStr.length()) {// 마지막 글자면
+					nowWord = argStr.substring(j, argStr.length());
 				} else {
-					compression += pattern;
-				}				
-			}
+					nowWord = argStr.substring(j, j + inxWidth);
+				}
+
+				int compressCnt = 1;// 압축된 횟수
+				StringBuffer tmpSb = new StringBuffer();
+
+				for (int k = j + inxWidth; k < argStr.length(); k += inxWidth) {
+					String nextWord = "";
+
+					if (k + inxWidth > argStr.length()) {
+						nextWord = argStr.substring(k, argStr.length());
+					} else {
+						nextWord = argStr.substring(k, k + inxWidth);
+					}
+
+					if (nowWord.equals(nextWord)) {
+						compressCnt++;
+						j = k;
+					} else {
+						break;
+					}
+				} // for k
+
+				if (compressCnt == 1) {
+					tmpSb.append(nowWord);
+				} else {
+					tmpSb.append(compressCnt).append(nowWord);
+				}
+				 
+				compressSb.append(tmpSb);
+				
+			} // for j
 			
-			pattern = nowStr;
-		}//for j
-		
-		return compression;
+			answer = Math.min(answer, compressSb.toString().length());
+		} // for inxWidth
+
+		return answer;
 	}
 
 	/*
