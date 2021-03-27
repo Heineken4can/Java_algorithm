@@ -1,10 +1,13 @@
 package exercise.d_testForRamda256.d_routeTrace.BFS_DFS;
-//https://m.blog.naver.com/lm040466/221787478911
-
-import java.io.IOException;
+//https://kingpodo.tistory.com/46 --> dfs,bfs 기본 설명 
+//https://leveloper.tistory.com/35
+//dfs 인접행렬, 재귀
+//bfs 인접행렬, 큐
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
+
 /*
 입력값  
 4 5 1
@@ -19,75 +22,52 @@ import java.util.Scanner;
 1 2 3 4 
  */
 public class A2_BFS_DFS {
+	private static int N, M, V;
+	private static int[][] graph;
+	private static boolean[] check;
 
-	  //함수에서 사용할 변수들
-	  static int[][] check; //간선 연결상태
-	  static boolean[] checked; //확인 여부
-	  static int n; //정점개수 4 
-	  static int m; //간선개수 5 
-	  static int start; //시작정점 1
-	  
-	  public static void main(String[] args) throws IOException {
-	  Scanner sc = new Scanner(System.in);
-	  n = sc.nextInt();
-	  m = sc.nextInt();
-	  start = sc.nextInt();//4 5 1
-	  
-	  check = new int[1001][1001]; //좌표를 그대로 받아들이기 위해 +1해서 선언
-	  checked = new boolean[1001]; //초기값 False
-	  /*
-		1 2
-		1 3
-		1 4
-		2 4
-		3 4
-	   */
-	  //간선 연결상태 저장
-	  for(int i = 0; i < m; i++) {
-	    int x = sc.nextInt();
-	    int y = sc.nextInt();
-	    
-	    check[x][y] = check[y][x] = 1;
-	  }
-	  
-	  dfs(start); //dfs호출
-	  
-	  checked = new boolean[1001]; //확인상태 초기화
-	  System.out.println(); //줄바꿈
-	  
-	  bfs(); //bfs호출
-	  }
-	  
-	  //시작점을 변수로 받아 확인, 출력 후 다음 연결점을 찾아 시작점을 변경하여 재호출
-	  public static void dfs(int i) {
-	    checked[i] = true;
-	    System.out.print(i + " ");
-	    
-	    for(int j = 1; j <= n; j++) {
-	      if(check[i][j] == 1 && checked[j] == false) {
-	        dfs(j);
-	      }
-	    }
-	  }
-	  
-	  public static void bfs() {
-	    Queue<Integer> queue = new LinkedList<Integer>();
-	    queue.offer(start); //시작점도 Queue에 넣어야 함
-	    checked[start] = true;
-	    System.out.print(start + " ");
-	    
-	    //Queue가 빌 때까지 반복. 방문 정점은 확인, 출력 후 Queue에 넣어 순서대로 확인
-	    while(!queue.isEmpty()) {
-	      int temp = queue.poll();
-	      
-	      for(int j = 1; j <= n; j++) {
-	        if(check[temp][j] == 1 && checked[j] == false) {
-	          queue.offer(j);
-	          checked[j] = true;
-	          System.out.print(j + " ");
-	        }
-	      }
-	    }
-	  }
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		N = sc.nextInt();//4
+		M = sc.nextInt();//5
+		V = sc.nextInt();//1
+		graph = new int[N + 1][N + 1];// == map 
+		check = new boolean[N + 1];// == visit
+		for (int i = 0; i < M; i++) {
+			int x = sc.nextInt();
+			int y = sc.nextInt();
+			graph[x][y] = 1;
+			graph[y][x] = 1;
+		}
+		dfs(V);
+		System.out.println();
+		Arrays.fill(check, false); // check 배열 초기화 bfs(V); }
 	}
 
+	public static void dfs(int start) {
+		check[start] = true;
+		System.out.print(start + " ");
+		for (int i = 1; i < N + 1; i++) {//N=5
+			if (graph[start][i] == 1 && !check[i]) // 간선으로 연결되었으며 아직 방문하지 않은 정점
+				dfs(i);
+		}
+	}
+
+	public static void bfs(int start) {
+		Queue<Integer> q = new LinkedList<>();
+		q.offer(start);//offer 나 add
+		check[start] = true;
+		while (!q.isEmpty()) {
+			int vertex = q.poll();
+			System.out.print(vertex + " ");
+			for (int i = 1; i < N + 1; i++) {
+				if (graph[vertex][i] == 1 && !check[i]) { // 간선으로 연결되었으며(1이며) 아직 방문하지 않은 정점
+					q.offer(i);
+					check[i] = true;
+				}
+			}
+		}
+	}
+
+}
+// class
