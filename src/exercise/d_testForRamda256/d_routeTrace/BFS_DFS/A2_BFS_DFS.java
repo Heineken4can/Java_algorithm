@@ -18,7 +18,7 @@ import java.util.Scanner;
 1 2 4 3 
 1 2 3 4 
  */
-public class A_BFS_DFS {
+public class A2_BFS_DFS {
 
 	  //함수에서 사용할 변수들
 	  static int[][] check; //간선 연결상태

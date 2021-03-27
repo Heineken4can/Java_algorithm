@@ -19,7 +19,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
-public class A_BFS_DFS2 {
+public class A2_BFS_DFS2 {
 
 	static int[][] check;// 간선 연결 상태
 	static boolean[] checked;// 확인 여부
