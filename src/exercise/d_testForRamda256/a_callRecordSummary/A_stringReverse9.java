@@ -7,7 +7,7 @@ package exercise.d_testForRamda256.a_callRecordSummary;
 
 import java.util.Scanner;
 
-public class A_stringReverse4 {
+public class A_stringReverse9 {
 
 	public static String str;
 	public static int count0 = 0;
