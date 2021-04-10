@@ -27,7 +27,7 @@ public class B_stringCompression {
 		// 1개 단위(step)부터 압축 단위를 늘려가며 확인
 		for (int step = 1; step < s.length() / 2 + 1; step++) {
 			String compressed = "";
-			String prev = s.substring(0, step); // 앞에서부터 step만큼의 문자열 추출
+			String prev = s.substring(0, step); // 앞에서부터 step만큼의 문자열 추
 			int cnt = 1;
 			// 단위(step) 크기만큼 증가시키며 이전 문자열과 비교
 			for (int j = step; j < s.length(); j += step) {

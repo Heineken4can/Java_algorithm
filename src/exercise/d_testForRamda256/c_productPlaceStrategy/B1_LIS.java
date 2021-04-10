@@ -9,7 +9,11 @@ import java.util.StringTokenizer;
 /*
 테스트 예시
 6
-10 20 10 30 20 50
+sq : 10 20 10 30 20 50
+i  : 0  1  2  3  4  5
+dp : 1  2  1  3  2  4
+j  : 0  1  2  3  4  5
+
 답 : 4
  */
 public class B1_LIS {
@@ -35,7 +39,8 @@ public class B1_LIS {
 			for (int j = 0; j < i; j++) {
 
 				// j번째 원소가 i번째 원소보다 작으면서 i번째 dp가 j번째 dp+1 값보다 작은경우
-				if (seq[j] < seq[i] && dp[i] < dp[j] + 1) {
+				//if (seq[j] < seq[i] && dp[i] < dp[j] + 1) {
+				if (seq[j] < seq[i] && dp[j] + 1 > dp[i]) {
 					dp[i] = dp[j] + 1; // j번째 원소의 +1 값이 i번째 dp가 된다.
 				}
 			}

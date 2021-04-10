@@ -10,7 +10,7 @@ import java.util.Stack;
  * (()((())()(
  */
 
-public class B_validityCertification3 {
+public class B_validityCertification9 {
 	static int testCnt;
 	static Stack<Character> stack1;
 

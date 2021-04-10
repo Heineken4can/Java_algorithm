@@ -15,7 +15,7 @@ import java.util.Scanner;
 
 //import com.sun.tools.javac.util.Assert;
 
-public class B_stringCompression3 {
+public class B_stringCompression9 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int resultCnt = 0;

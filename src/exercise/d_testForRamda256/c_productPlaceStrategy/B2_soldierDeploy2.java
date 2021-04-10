@@ -7,7 +7,15 @@ import java.util.Scanner;
 /*
  7
 15 11 4 8 5 2 4
+
+테스트 예시 - 최장 증가 수열 참고 
+6
+sq : 10 20 10 30 20 50
+i  : 0  1  2  3  4  5
+dp : 1  2  1  3  2  4
+j  : 0  1  2  3  4  5
  */
+
 
 public class B2_soldierDeploy2 {
 		
