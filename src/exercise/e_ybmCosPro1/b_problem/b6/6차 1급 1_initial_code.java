@@ -1,7 +1,7 @@
 // 다음과 같이 import를 사용할 수 있습니다.
 import java.util.*;
 
-class Solution {
+public class Solution {
     public int solution(int n, int[][] garden) {
         // 여기에 코드를 작성해주세요.
         int answer = 0;
