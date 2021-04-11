@@ -1,11 +1,19 @@
-public class Solution {
+package exercise.e_ybmCosPro1.d_study.d6;
+/*
+import exercise.e_ybmCosPro1.c_solution.c6.Solution.Job;
+import exercise.e_ybmCosPro1.c_solution.c6.Solution.PartTimeJob;
+import exercise.e_ybmCosPro1.c_solution.c6.Solution.SalesJob;
+*/
+
+public class D610_salarySum {
+
 	class Job {
 		public int salary;
 
 		public Job() {
 			this.salary = 0;
 		}
-		
+
 		public int getSalary() {
 			return salary;
 		}
@@ -21,7 +29,7 @@ public class Solution {
 
 		public int getSalary() {
 			salary = workHour * payPerHour;
-			if(workHour >= 40)
+			if (workHour >= 40)
 				salary += (payPerHour * 8);
 
 			return salary;
@@ -37,9 +45,9 @@ public class Solution {
 		}
 
 		public int getSalary() {
-			if(salesResult > 20)
+			if (salesResult > 20)
 				salary = salesResult * payPerSale * 3;
-			else if(salesResult > 10)
+			else if (salesResult > 10)
 				salary = salesResult * payPerSale * 2;
 			else
 				salary = salesResult * payPerSale;
@@ -51,16 +59,27 @@ public class Solution {
 	public int solution(int[][] partTimeJobs, int[][] salesJobs) {
 		int answer = 0;
 
-		for(int i = 0; i < partTimeJobs.length; i++) {
+		for (int i = 0; i < partTimeJobs.length; i++) {
 			PartTimeJob partTimeJob = new PartTimeJob(partTimeJobs[i][0], partTimeJobs[i][1]);
 			answer += partTimeJob.getSalary();
 		}
 
-		for(int i = 0; i < salesJobs.length; i++) {
+		for (int i = 0; i < salesJobs.length; i++) {
 			SalesJob salesJob = new SalesJob(salesJobs[i][0], salesJobs[i][1]);
 			answer += salesJob.getSalary();
 		}
 
 		return answer;
+	}
+
+	// 아래는 테스트케이스 출력을 해보기 위한 main 메소드입니다.
+	public static void main(String[] args) {
+		D610_salarySum sol = new D610_salarySum();
+		int[][] partTimeJobs = { { 10, 5000 }, { 43, 6800 }, { 5, 12800 } };
+		int[][] salesJobs = { { 3, 18000 }, { 12, 8500 } };
+		int ret = sol.solution(partTimeJobs, salesJobs);
+
+		// [실행] 버튼을 누르면 출력 값을 볼 수 있습니다.
+		System.out.println("solution 메소드의 반환 값은 " + ret + " 입니다.");
 	}
 }
